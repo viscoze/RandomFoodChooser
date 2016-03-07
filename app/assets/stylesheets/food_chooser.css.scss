@@ -1,0 +1,86 @@
+$backColorOfBody: #67022b;
+$backColorOfMainPanel: #00ff92;
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat-Regular'), url(http://fonts.gstatic.com/s/montserrat/v6/zhcz-_WihjSQC0oHJ9TCYPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+/* universal */
+
+body {
+  padding-top: 20px;
+  color: white !important;
+  font: 22px Montserrat, sans-serif !important;
+}
+
+#main-panel {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  background-color: $backColorOfMainPanel;
+  height: 80%;
+
+  main {
+    padding: 10px 18px 0 18px;
+  }
+
+  nav.navbar {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding-bottom: 10px;
+  }
+  .navbar-brand {
+    font-size: 25px !important;
+  }
+  span.glyphicon-apple {
+    color: #cc0000;
+  }
+
+  .food-checker {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    margin: 0 15px 0 15px;
+    color: #777;
+  }
+  .row {
+    margin-bottom: 20px;
+  }
+
+  #lets-start-button {
+    margin: 20px 0 0 0;
+    font-size: 1.5em;
+    border-radius: 5px;
+  }
+
+  div.cuisine-box {
+    padding: 3px;
+    display: block;
+
+    img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+    }
+
+    .name {
+      font-size: 20px;
+      font-style: italic;
+      display: inline-block;
+      border-bottom: 1px solid #cc0000;
+    }
+
+    .description {
+      font-size: 15px;
+    }
+
+    #add-your-option {
+      font-size: 80px;
+      color: #cc0000;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<% unless @cuisines.empty? %>
+  <% @cuisines.each do |cuisine| %>
+    <div class="cuisine-box">
+      <div class="row">
+        <div class="col-sm-2">
+          <%= image_tag "cuisine/#{cuisine.name}.jpg" %>
+        </div>
+        <div class="col-sm-9">
+          <span class="name"><%= cuisine.name %></span></br>
+          <span class="description"><%= cuisine.description %></span>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <%= render 'lorem_ipsum' %>
+<% end %>

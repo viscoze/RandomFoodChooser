@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 text-left" id="main-panel">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid text-center">
+          <a class="navbar-brand" href="/">
+            <span class="glyphicon glyphicon-apple"></span>
+            RandomFoodChooser
+          </a>
+        </div>
+      </nav>
+      <main>
+        <div class="container food-checker-box">
+          <div class="row">
+            <div class="col-sm-8 food-checker">
+              <%= render 'cuisine' %>
+              <%= render 'add_your_option' %>
+            </div>
+            <div class="col-sm-3 food-checker pull-right"><%= render 'lorem_ipsum' %></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4"></div>
+          <div class="col-sm-3">
+            <a href="/" class="btn btn-warning btn-lg" id="lets-start-button">
+                Let's random it!
+            </a>
+          </div>
+          <div class="col-sm-5"></div>
+        </div>
+      </main>
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+</div>
