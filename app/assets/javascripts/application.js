@@ -19,3 +19,23 @@
 //= require react_ujs
 //= require components
 //= require_tree .
+
+function getOption(options) {
+  var array = [];
+  options.forEach(function(item) {
+    for(var i = 0; i < item[1]; i++) array.push(item[0]);
+  });
+  return shuffle(array)[0];
+}
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
