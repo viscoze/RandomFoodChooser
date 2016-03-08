@@ -1,5 +1,7 @@
 $backColorOfBody: #67022b;
 $backColorOfMainPanel: #00ff92;
+$grey: #777;
+$red: #cc0000;
 
 @font-face {
   font-family: 'Montserrat';
@@ -58,8 +60,12 @@ body {
   }
 
   div.cuisine-box {
-    padding: 3px;
+    padding-top: 10px;
     display: block;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #777;
+    }
 
     img {
       border-radius: 50%;
@@ -81,6 +87,10 @@ body {
     #add-your-option {
       font-size: 80px;
       color: #cc0000;
+    }
+
+    input {
+      margin: 15px 5px 15px 0px;
     }
   }
 }
