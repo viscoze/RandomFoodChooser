@@ -18,7 +18,6 @@
               <%= render 'add_your_option' %>
             </div>
             <div class="col-sm-3 food-checker pull-right" id="chosen">
-              <!-- Insert React Components -->
               <%= react_component('ChosenCuisineBox') %>
             </div>
           </div>
@@ -26,11 +25,12 @@
         <div class="row">
           <div class="col-sm-4"></div>
           <div class="col-sm-3">
-            <a href="/" class="btn btn-warning btn-lg" id="lets-start-button">
-                Let's random it!
-            </a>
+            <%= react_component('RandomButton') %>
           </div>
           <div class="col-sm-5"></div>
+        </div>
+        <div class="container">
+          <div id="show-result"></div>
         </div>
       </main>
     </div>

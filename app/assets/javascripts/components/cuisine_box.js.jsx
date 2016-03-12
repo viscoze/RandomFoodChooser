@@ -1,17 +1,19 @@
+var chosenCuisines = [];
+
 var ChosenCuisineBox = React.createClass({
   render: function() {
     if (this.props.name === undefined) {
       return (<div className="cuisine-box empty-box">Choose Something</div>)
     }
-    var image = "cuisine/" + this.props.name + ".jpg"
+    var image = "/assets/cuisine/" + this.props.name + ".jpg";
 
     return (
-        <div className="cuisine-box">
+        <div className="chosen-box">
           <div className="row">
-            <div className="col-sm-2">
+            <div className="col-sm-3">
               <img src={image} />
             </div>
-            <div className="col-sm-9">
+            <div className="col-sm-7 col-sm-offset-2">
               <span className="name">{this.props.name}</span><br />
             </div>
           </div>
@@ -23,12 +25,13 @@ var ChosenCuisineBox = React.createClass({
 var Cuisine = React.createClass({
 
   clickOnCuisine(event) {
+    chosenCuisines.push(this.props.name);
     ReactDOM.render(<ChosenCuisineBox name={this.props.name}/>,
                     document.getElementById('chosen'));
   },
 
   render(){
-    var image = "app/assets/images/cuisine/" + this.props.name + ".jpg"
+    var image = "/assets/cuisine/" + this.props.name + ".jpg";
 
     return (
     <div className="cuisine-box" onClick={this.clickOnCuisine}>
@@ -44,5 +47,4 @@ var Cuisine = React.createClass({
     </div>
     )
   }
-
 })
