@@ -26,8 +26,6 @@ var Cuisine = React.createClass({
 
   clickOnCuisine(event) {
     chosenCuisines.push(this.props.name);
-    ReactDOM.render(<ChosenCuisineBox name={this.props.name}/>,
-                    document.getElementById('chosen'));
   },
 
   render(){

@@ -22,10 +22,10 @@
 
 function getOption(options) {
   var array = [];
-  options.forEach(function(item) {
-    for(var i = 0; i < item[1]; i++) array.push(item[0]);
-  });
-  return shuffle(array)[0];
+  // options.forEach(function(item) {
+  //   for(var i = 0; i < item[1]; i++) array.push(item[0]);
+  // });
+  return shuffle(options)[0];
 }
 
 function shuffle(array) {

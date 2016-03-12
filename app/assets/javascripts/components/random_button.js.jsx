@@ -1,6 +1,7 @@
 var RandomButton = React.createClass({
   clickOnRandom(event) {
-    var result = getOption();
+    var result = getOption(chosenCuisines);
+    console.log(result);
     ReactDOM.render(<ShowResultOfRandom result={result} />,
                     document.getElementById("show-result"));
   },
@@ -18,6 +19,6 @@ var RandomButton = React.createClass({
 
 var ShowResultOfRandom = React.createClass({
   render() {
-    return (<div>{this.props.result}</div>)
+    return (<div id="show-result">{this.props.result}</div>);
   }
 })
